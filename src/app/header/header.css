@@ -1,0 +1,40 @@
+.header {
+  background: linear-gradient(135deg, #202937 0%, #423D42 100%);
+  padding: 35px 20px;
+  text-align: center;
+  border-bottom: 2px solid #766664;
+  box-shadow: 0 10px 25px rgba(32, 41, 55, 0.6);
+}
+
+.gradient-text {
+  margin: 6px 0;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #E6D7CD 0%, #D4C1B9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;/*градієнт по контуру літер*/
+  -webkit-text-fill-color: transparent;
+}
+
+.header h2.gradient-text {
+  font-size: 20px;
+  background: linear-gradient(90deg, #D4C1B9 0%, #A99898 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.author-badge {
+  margin-top: 18px;
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(66, 61, 66, 0.4);
+  border: 1px solid #766664;
+  border-radius: 20px;
+  color: #D4C1B9;
+  font-size: 15px;
+}
+
+.author-badge strong {
+  color: #E6D7CD;
+}

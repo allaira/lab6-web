@@ -1,0 +1,56 @@
+<section class="container">
+  <div class="task-card">
+    <h3>Умова завдання</h3>
+    <p>
+      <strong>Базовий клас:</strong> Квартира (поля: назва, вартість 1м², площа). Метод: Вартість квартири.<br>
+      <strong>Нащадок:</strong> Квартира в центрі (поле: назва району). Зміни: збільшення вартості на 0.01 (1%) від вартості.
+    </p>
+  </div>
+
+  <form class="form-grid" (submit)="$event.preventDefault()">
+    <fieldset>
+      <legend>Параметри квартири</legend>
+
+      <label>Назва ЖК або квартири:
+        <input type="text" #nameInput value="ЖК Світязь" placeholder="Введіть назву">
+      </label>
+
+      <label>Вартість 1 м² ($):
+        <input type="number" #priceInput value="950" min="1" placeholder="Ціна">
+      </label>
+
+      <label>Загальна площа (м²):
+        <input type="number" #areaInput value="64" min="1" placeholder="Площа">
+      </label>
+
+      <label>Назва району для центру:
+        <input type="text" #districtInput value="Печерський" placeholder="Район міста">
+      </label>
+
+      <button 
+        type="button" 
+        class="calc-btn" 
+        (click)="calcApartments(nameInput.value, priceInput.value, areaInput.value, districtInput.value)">
+        Розрахувати вартість
+      </button>
+    </fieldset>
+  </form>
+
+  <!-- Показ помилки, якщо вона є -->
+<!-- ngIf - це структурна директива умовного показу в Angular -->
+  <div *ngIf="errorMessage" class="alert-box">
+     {{ errorMessage }}
+  </div>
+<!-- Показ результатів після розрахунку -->
+  <div *ngIf="baseApartmentInfo" class="results-box">
+    <h4>Результати розрахунків:</h4>
+    <div class="result-item base">
+      <div class="item-title">Звичайна квартира (базовий клас):</div>
+      <p>{{ baseApartmentInfo }}</p>
+    </div>
+    <div class="result-item center">
+      <div class="item-title">Квартира в центрі (клас-нащадок):</div>
+      <p>{{ centerApartmentInfo }}</p>
+    </div>
+  </div>
+</section>

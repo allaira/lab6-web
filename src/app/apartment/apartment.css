@@ -1,0 +1,131 @@
+.container {
+  max-width: 760px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+.task-card {
+  background-color: #202937;
+  border-left: 5px solid #A99898;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 25px;
+  color: #D4C1B9;
+}
+
+.task-card h3 {
+  color: #E6D7CD;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.form-grid {
+  background-color: #202937;
+  border: 1px solid #423D42;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+fieldset {
+  border: 1px solid #766664;
+  border-radius: 6px;
+  padding: 18px;
+}
+
+legend {
+  color: #E6D7CD;
+  padding: 0 8px;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 14px;
+  color: #D4C1B9;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid #766664;
+  background-color: #423D42;
+  color: #E6D7CD;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #A99898;
+}
+
+.calc-btn {
+  width: 100%;
+  background-color: #766664;
+  border: 1px solid #A99898;
+  color: #E6D7CD;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.calc-btn:hover {
+  background-color: #A99898;
+  color: #202937;
+}
+
+.alert-box {
+  background-color: #4a2828;
+  border: 1px solid #766664;
+  color: #E6D7CD;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.results-box {
+  background-color: #202937;
+  border: 1px solid #423D42;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.results-box h4 {
+  color: #E6D7CD;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.result-item {
+  padding: 14px 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.result-item.base {
+  background-color: #423D42;
+  border-left: 5px solid #766664;
+}
+
+.result-item.center {
+  background-color: #423D42;
+  border-left: 5px solid #A99898;
+}
+
+.item-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #E6D7CD;
+}
+
+.result-item p {
+  color: #D4C1B9;
+  line-height: 1.5;
+}
