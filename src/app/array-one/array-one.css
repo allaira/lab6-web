@@ -1,0 +1,124 @@
+.card-container {
+  max-width: 680px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: inherit;
+}
+
+.task-info, 
+.form-card, 
+.results-box {
+  background-color: #202937; 
+  border: 1px solid rgba(230, 215, 205, 0.12);
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.task-info h3, 
+.results-box h4 {
+  margin: 0 0 10px 0;
+  color: #E6D7CD; 
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.task-info p {
+  color: #A99898; 
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-card label {
+  color: #D4C1B9; 
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.styled-input {
+  background-color: #423D42;
+  border: 1px solid rgba(212, 193, 185, 0.25);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #E6D7CD;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.styled-input:focus {
+  outline: none;
+  border-color: #A99898;
+  background-color: #353035;
+  box-shadow: 0 0 0 3px rgba(169, 152, 152, 0.15);
+}
+
+.styled-input::placeholder {
+  color: rgba(169, 152, 152, 0.6);
+}
+
+.btn-calc {
+  background-color: #766664;
+  color: #E6D7CD;
+  border: 1px solid rgba(230, 215, 205, 0.2);
+  padding: 13px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 6px;
+}
+
+.btn-calc:hover {
+  background-color: #625452;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btn-calc:active {
+  transform: translateY(1px);
+}
+
+.result-item {
+  background-color: #423D42;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border-left: 4px solid #A99898;
+}
+
+.result-item:last-child {
+  margin-bottom: 0;
+}
+
+.item-title {
+  font-size: 0.85rem;
+  color: #A99898;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.highlight-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #D4C1B9;
+  margin: 0;
+}
+
+.alert-box {
+  background-color: #3f2326;
+  border: 1px solid #8e3b42;
+  color: #f7c5c8;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}

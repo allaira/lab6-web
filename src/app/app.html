@@ -1,2 +1,11 @@
 <app-header></app-header>
-<app-apartment></app-apartment>
+
+<div class="profile-menu">
+  <a routerLink="/classes" routerLinkActive="active" class="profile-menu-link">Лаб 6: Класи</a>
+  <a routerLink="/array-one" routerLinkActive="active" class="profile-menu-link">Лаб 7.1: Одновимірний масив</a>
+  <a routerLink="/array-two" routerLinkActive="active" class="profile-menu-link">Лаб 7.2: Двовимірний масив</a>
+</div>
+
+<main class="content-container">
+  <router-outlet></router-outlet>
+</main>

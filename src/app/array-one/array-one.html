@@ -1,0 +1,31 @@
+<div class="card-container">
+  <div class="task-info">
+    <h3>Завдання: Одновимірний масив (Варіант 1)</h3>
+    <p>Введіть з клавіатури 5 цілих чисел. Програма виведе їх в один рядок через кому та знайде середнє арифметичне.</p>
+  </div>
+
+  <div class="form-card">
+    <label>Введіть 5 цілих чисел через кому:</label>
+    <input type="text" #inputRef placeholder="Наприклад: 12, -4, 8, 20, 5" class="styled-input" />
+
+    <button type="button" class="btn-calc" (click)="calculate(inputRef.value)">
+      Опрацювати масив
+    </button>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert-box">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="isCalculated" class="results-box">
+    <h4>Результат обробки:</h4>
+    <div class="result-item">
+      <div class="item-title">Елементи масиву:</div>
+      <p class="highlight-text">{{ arrayLogic.numbers.join(', ') }}</p>
+    </div>
+    <div class="result-item">
+      <div class="item-title">Середнє арифметичне:</div>
+      <p class="highlight-text">{{ arrayLogic.average }}</p>
+    </div>
+  </div>
+</div>

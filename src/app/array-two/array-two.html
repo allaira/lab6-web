@@ -1,0 +1,30 @@
+<div class="card-container">
+  <div class="task-info">
+    <h3>Завдання: Двовимірний масив (Варіант 1)</h3>
+    <p>Масив X розмірністю 5×4. Замінити в ньому всі елементи, менші за 5, числом 111.</p>
+  </div>
+
+  <div class="form-card">
+    <button type="button" class="btn-calc" (click)="generate()">
+      Згенерувати та перетворити матрицю (5×4)
+    </button>
+  </div>
+
+  <div *ngIf="isGenerated" class="results-box">
+    <h4>Початкова матриця (5×4):</h4>
+    <table class="matrix-table">
+      <tr *ngFor="let row of matrixLogic.initialMatrix">
+        <td *ngFor="let cell of row">{{ cell }}</td>
+      </tr>
+    </table>
+
+    <h4 style="margin-top: 20px;">Перетворена матриця (&lt; 5 замінено на 111):</h4>
+    <table class="matrix-table">
+      <tr *ngFor="let row of matrixLogic.modifierMatrix">
+        <td *ngFor="let cell of row" [class.replaced]="cell === 111">
+          {{ cell }}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

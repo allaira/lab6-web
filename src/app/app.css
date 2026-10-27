@@ -1,0 +1,31 @@
+.profile-menu {
+  display: flex;
+  justify-content: center;
+  background-color: #1e222d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 10px;
+}
+
+.profile-menu-link {
+  padding: 16px 24px;
+  color: #E6D7CD;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.profile-menu-link:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.profile-menu-link.active {
+  color: #E6D7CD;
+  border-bottom: 3px solid #c8bcb4;
+  background-color: rgba(234, 216, 195, 0.198);
+}
+
+.content-container {
+  padding: 20px 0;
+}

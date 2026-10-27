@@ -13,12 +13,14 @@ import { CenterApartment } from '../Class/center-apartment';
 export class ApartmentComponent {
   baseApartmentInfo: string = '';
   centerApartmentInfo: string = '';
+  calcAverage: string = '';
   errorMessage: string = '';
 
   calcApartments(name: string, priceStr: string, areaStr: string, district: string) {
     this.errorMessage = '';
     this.baseApartmentInfo = '';
     this.centerApartmentInfo = '';
+    this.calcAverage = '';
 
     if (!name.trim() || !district.trim()) {
       this.errorMessage = 'Будь ласка, заповніть назву житлового комплексу та район!';
@@ -40,8 +42,10 @@ export class ApartmentComponent {
 
       const centerApt = new CenterApartment(name, price, area, district);
       const centerCost = centerApt.calcCost();
+      const calcAvg = centerApt.calcAvg();
       const surcharge = centerCost - baseCost;
       this.centerApartmentInfo = `Квартира в центрі (Район: ${centerApt.district}): підсумкова вартість = ${centerCost.toLocaleString()} $ (з них надбавка за центр 1% = +${surcharge.toLocaleString()} $)`;
+      this.calcAverage = `${calcAvg}`;
     } catch (err: any) {
       this.errorMessage = err.message || 'Помилка у вхідних даних!';
     }
